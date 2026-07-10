@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Event Listner
+        </title>
+    </head>
+    <boby>
+        <button id = "hii">
+            Click
+        </button>
+    </boby>
+    <script>
+        let ele = document.getElementById("hii");
+        ele.addEventListener('click', (event) =>{
+            ele.textContent='clicked';
+            console.log("clicked");
+        });
+
+        ele.addEventListener('mouseover',(event)=>{
+            ele.textContent = 'is there';
+            console.log("hover");
+        });
+
+         ele.addEventListener('mouseout',(event)=>{
+            ele.textContent = 'clik';
+            console.log("hover");
+        });
+
+    </script>
+</html>

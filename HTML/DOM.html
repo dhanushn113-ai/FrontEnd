@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DOM Learning
+        </title>
+    </head>
+    <body>
+        <h id="head">This is balayy</h>
+        <div id = "divclass">
+
+        </div>
+    </body>
+    <script>
+       let head =  document.getElementById("head"); 
+       head.className = 'headclass';
+       let ele = document.getElementById("divclass");
+       ele.innerHTML = '<p> hi hi hi </p>';
+       console.log(head.textContent);
+       console.log("hii");
+       let para = document.createElement('p');
+       para.textContent='para';
+       console.log(para);
+       head.append(para);
+
+
+    </script>
+</html>

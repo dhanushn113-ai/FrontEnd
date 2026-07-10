@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            keydown
+        </title>
+    </head>
+    <body>
+        <button id = "btn">
+            1
+        </button>
+    </body>
+    <script>
+        let ele = document.getElementById("btn");
+        document.addEventListener('keydown', (event)=>{
+            console.log(event.key);
+            switch (event.key){
+                case "ArrowUp":
+                    ele.textContent=Number(ele.textContent)+1;
+                    break;
+                case "ArrowDown":
+                    ele.textContent=Number(ele.textContent)-1;
+                    break;
+
+
+            }
+        })
+    </script>
+</html>
