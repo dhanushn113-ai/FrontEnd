@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            A Small Todo Application
+        </title>
+    </head>
+    <body>
+        <h><b>Todo Application</b></h><br>
+        <ul id = "todo">
+
+        </ul>
+        <div>
+            <input id ="submit" type="text">
+            <button id = "click">
+                Click
+            </button>
+        </div>
+        <h2 >
+            Complete
+        </h2>
+        <ul id ="doneList">
+
+        </ul>
+    </body>
+    <script>
+        let text = document.getElementById("click");
+        let task = document.getElementById("submit");
+        let todolist = document.getElementById("todo")
+        let doneList = document.getElementById("doneList");
+
+        let list = new Array();
+        text.addEventListener("click", (event)=>{
+            if(task.value != ''){
+                list.push(task.value);
+                todolist.innerHTML += '<li id = "'+(list.length-1)+'"><button onclick="complete('+(list.length-1)+')">'+task.value+'</button></li>';
+                 task.value = ' ';
+            }
+          
+        });
+        function complete(id) {
+            doneList.innerHTML += '<li>'+list[id]+'</li>';
+            document.getElementById(id).style.display="none";
+        }
+    </script>
+</html>
